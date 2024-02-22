@@ -1,0 +1,9 @@
+{{- if .Values.backup_job.enabled }}
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: sa-mongo-backup
+  annotations:
+    {{ toYaml .Values.backup_job.annotations  | indent 4 }}
+{{- end }}
