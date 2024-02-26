@@ -45,8 +45,8 @@ spec:
       schedulerName: {{ .Values.arbiter.schedulerName | quote }}
       {{- end }}
       serviceAccountName: {{ template "mongodb.serviceAccountName" . }}
-      {{- if .Values.arbiter.affinity }}
-      affinity: {{- include "common.tplvalues.render" (dict "value" .Values.arbiter.affinity "context" $) | nindent 8 }}
+      {{- if .Values.global.affinity }}
+      affinity: {{- include "common.tplvalues.render" (dict "value" .Values.global.affinity "context" $) | nindent 8 }}
       {{- else }}
       affinity:
         podAffinity: {{- include "common.affinities.pods" (dict "type" .Values.arbiter.podAffinityPreset "component" "arbiter" "customLabels" $podLabels "topologyKey" .Values.topologyKey "context" $) | nindent 10 }}

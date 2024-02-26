@@ -21,6 +21,17 @@ global:
   imagePullSecrets: []
   storageClass: ""
   namespaceOverride: ""
+
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: "Infra-Services"
+            operator: In
+            values:
+            - "true"
+
 ## @section Common parameters
 ##
 
@@ -2468,7 +2479,7 @@ backup_job:
   cron_for_full_backup: "*/3 * * * *"
 
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::767398031518:role/test-mysq-backup-restore
+    aws: arn:aws:iam::767398031518:role/test-mysq-backup-restore
 
   bucket_provider_type: s3
 
@@ -2488,7 +2499,7 @@ restore_job:
   aws_default_region: ap-south-1
 
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::767398031518:role/test-mysq-backup-restore
+    aws: arn:aws:iam::767398031518:role/test-mysq-backup-restore
 
   bucket_provider_type: s3
 

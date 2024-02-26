@@ -56,8 +56,8 @@ spec:
       schedulerName: {{ .Values.schedulerName | quote }}
       {{- end }}
       serviceAccountName: {{ template "mongodb.serviceAccountName" . }}
-      {{- if .Values.affinity }}
-      affinity: {{- include "common.tplvalues.render" (dict "value" .Values.affinity "context" $) | nindent 8 }}
+      {{- if .Values.global.affinity }}
+      affinity: {{- include "common.tplvalues.render" (dict "value" .Values.global.affinity "context" $) | nindent 8 }}
       {{- else }}
       affinity:
         podAffinity: {{- include "common.affinities.pods" (dict "type" .Values.podAffinityPreset "component" "mongodb" "customLabels" $podLabels "topologyKey" .Values.topologyKey "context" $) | nindent 10 }}

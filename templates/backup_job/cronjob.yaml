@@ -16,7 +16,7 @@ spec:
       template:
         spec:
           affinity:
-            {{- toYaml .Values.affinity | nindent 12 }}
+            {{- toYaml .Values.global.affinity | nindent 12 }}
           restartPolicy: OnFailure
           serviceAccountName: sa-mongo-backup
           containers:
