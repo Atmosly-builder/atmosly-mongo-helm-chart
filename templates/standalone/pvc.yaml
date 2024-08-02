@@ -24,6 +24,7 @@ spec:
   {{- range .Values.persistence.accessModes }}
     - {{ . | quote }}
   {{- end }}
+  persistentVolumeReclaimPolicy: Delete
   resources:
     requests:
       storage: {{ .Values.persistence.size | quote }}
