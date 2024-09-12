@@ -34,6 +34,7 @@ spec:
   {{- range .Values.backup.cronjob.storage.accessModes }}
     - {{ . | quote }}
   {{- end }}
+  persistentVolumeReclaimPolicy: Delete
   resources:
     requests:
       storage: {{ .Values.backup.cronjob.storage.size | quote }}
