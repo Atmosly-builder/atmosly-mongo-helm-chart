@@ -3,7 +3,7 @@ global:
 
   imagePullSecrets: []
   storageClass: "gp2"
-  namespaceOverride: "default"
+  namespaceOverride: ""
 
   affinity:
     nodeAffinity:
@@ -19,7 +19,7 @@ nameOverride: ""
 
 fullnameOverride: ""
 
-namespaceOverride: "default"
+namespaceOverride: ""
 
 kubeVersion: ""
 
