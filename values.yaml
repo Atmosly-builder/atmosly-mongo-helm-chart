@@ -181,7 +181,7 @@ annotations: {}
 
 labels: {}
 
-replicaCount: 2
+replicaCount: 1
 
 updateStrategy:
   type: RollingUpdate
@@ -480,6 +480,7 @@ volumePermissions:
     runAsUser: 0
 arbiter:
   enabled: true
+  replicaCount: 1
   automountServiceAccountToken: false
   hostAliases: []
   configuration: ""

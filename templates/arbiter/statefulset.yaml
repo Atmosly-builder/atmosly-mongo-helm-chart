@@ -18,6 +18,7 @@ metadata:
   {{- end }}
 spec:
   serviceName: {{ include "mongodb.arbiter.service.nameOverride" . }}
+  replicas: {{ .Values.arbiter.replicaCount}}
   podManagementPolicy: {{ .Values.arbiter.podManagementPolicy }}
   {{- if .Values.arbiter.updateStrategy }}
   updateStrategy: {{- toYaml .Values.arbiter.updateStrategy | nindent 4 }}
