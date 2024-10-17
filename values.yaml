@@ -10,7 +10,7 @@ global:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
-          - key: "Infra-Services"
+          - key: "Addons-Services"
             operator: In
             values:
             - "true"
@@ -205,7 +205,7 @@ affinity:
     requiredDuringSchedulingIgnoredDuringExecution:
       nodeSelectorTerms:
       - matchExpressions:
-        - key: "Infra-Services"
+        - key: "Addons-Services"
           operator: In
           values:
           - "true"
@@ -405,9 +405,9 @@ persistence:
     requests: {}
     dataSource: {}
 persistentVolumeClaimRetentionPolicy:
-  enabled: false
-  whenScaled: Retain
-  whenDeleted: Retain
+  enabled: true
+  whenScaled: Delete
+  whenDeleted: Delete
 backup:
   enabled: false
   cronjob:
@@ -511,7 +511,7 @@ arbiter:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
-          - key: "Infra-Services"
+          - key: "Addons-Services"
             operator: In
             values:
             - "true"
@@ -622,7 +622,7 @@ hidden:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
-          - key: "Infra-Services"
+          - key: "Addons-Services"
             operator: In
             values:
             - "true"
