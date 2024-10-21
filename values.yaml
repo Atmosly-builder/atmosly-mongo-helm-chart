@@ -411,9 +411,9 @@ persistence:
     requests: {}
     dataSource: {}
 persistentVolumeClaimRetentionPolicy:
-  enabled: false
-  whenScaled: Retain
-  whenDeleted: Retain
+  enabled: true
+  whenScaled: Delete
+  whenDeleted: Delete
 backup:
   enabled: false
   cronjob:
