@@ -17,7 +17,52 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.0.5
-    created: "2024-09-24T21:46:08.712417322+05:30"
+    created: "2024-10-21T15:04:50.005511312+05:30"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: MongoDB(R) is a relational open source NoSQL database. Easy to use,
+      it stores data in JSON-like documents. Automated scalability and high-performance.
+      Ideal for developing cloud native applications.
+    digest: defeaa6d1404e3266741389968df6b799cc1a41cabdeee1ded04d124c6a013a5
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
+    keywords:
+    - mongodb
+    - database
+    - nosql
+    - cluster
+    - replicaset
+    - replication
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: mongodb
+    sources:
+    - https://atmosly-builder.github.io/atmosly-mongo-helm-chart/mongodb-14.10.0.tgz
+    urls:
+    - https://atmosly-builder.github.io/atmosly-mongo-helm-chart/mongodb-14.10.5.tgz
+    version: 14.10.5
+  - annotations:
+      category: Database
+      images: |
+        - name: kubectl
+          image: docker.io/bitnami/kubectl:1.29.1-debian-11-r3
+        - name: mongodb-exporter
+          image: docker.io/bitnami/mongodb-exporter:0.40.0-debian-11-r6
+        - name: mongodb
+          image: docker.io/bitnami/mongodb:7.0.5-debian-11-r6
+        - name: nginx
+          image: docker.io/bitnami/nginx:1.25.3-debian-11-r7
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:11-debian-11-r96
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 7.0.5
+    created: "2024-10-21T15:04:50.00089601+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -62,7 +107,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.0.5
-    created: "2024-09-24T21:46:08.708082922+05:30"
+    created: "2024-10-21T15:04:49.993897308+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -107,7 +152,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.0.5
-    created: "2024-09-24T21:46:08.703015722+05:30"
+    created: "2024-10-21T15:04:49.986106005+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -152,7 +197,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.0.5
-    created: "2024-09-24T21:46:08.674701123+05:30"
+    created: "2024-10-21T15:04:49.959072896+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -197,7 +242,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.0.5
-    created: "2024-09-24T21:46:08.662127224+05:30"
+    created: "2024-10-21T15:04:49.946252591+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -226,4 +271,4 @@ entries:
     urls:
     - https://atmosly-builder.github.io/atmosly-mongo-helm-chart/mongodb-14.10.0.tgz
     version: 14.10.0
-generated: "2024-09-24T21:46:08.652447824+05:30"
+generated: "2024-10-21T15:04:49.935976188+05:30"

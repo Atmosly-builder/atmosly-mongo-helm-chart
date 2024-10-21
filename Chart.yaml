@@ -38,4 +38,4 @@ maintainers:
 name: mongodb
 sources:
 - https://atmosly-builder.github.io/atmosly-mongo-helm-chart/mongodb-14.10.0.tgz
-version: 14.10.4
+version: 14.10.5
