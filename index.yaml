@@ -17,7 +17,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.0.5
-    created: "2024-10-21T15:04:50.005511312+05:30"
+    created: "2024-10-21T15:15:56.496072154+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -27,7 +27,7 @@ entries:
     description: MongoDB(R) is a relational open source NoSQL database. Easy to use,
       it stores data in JSON-like documents. Automated scalability and high-performance.
       Ideal for developing cloud native applications.
-    digest: defeaa6d1404e3266741389968df6b799cc1a41cabdeee1ded04d124c6a013a5
+    digest: 2fae79475c328d38a4c17b26ecc4d315e234e679b09eb674880c33d4957d1e9f
     home: https://bitnami.com
     icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
     keywords:
@@ -62,7 +62,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.0.5
-    created: "2024-10-21T15:04:50.00089601+05:30"
+    created: "2024-10-21T15:15:56.491575857+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -107,7 +107,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.0.5
-    created: "2024-10-21T15:04:49.993897308+05:30"
+    created: "2024-10-21T15:15:56.487372461+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -152,7 +152,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.0.5
-    created: "2024-10-21T15:04:49.986106005+05:30"
+    created: "2024-10-21T15:15:56.483291164+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -197,7 +197,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.0.5
-    created: "2024-10-21T15:04:49.959072896+05:30"
+    created: "2024-10-21T15:15:56.456451786+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -242,7 +242,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.0.5
-    created: "2024-10-21T15:04:49.946252591+05:30"
+    created: "2024-10-21T15:15:56.444678395+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -271,4 +271,4 @@ entries:
     urls:
     - https://atmosly-builder.github.io/atmosly-mongo-helm-chart/mongodb-14.10.0.tgz
     version: 14.10.0
-generated: "2024-10-21T15:04:49.935976188+05:30"
+generated: "2024-10-21T15:15:56.436579601+05:30"
