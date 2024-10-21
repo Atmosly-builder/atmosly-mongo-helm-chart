@@ -162,8 +162,14 @@ replicaSetConfigurationSettings:
 
 existingConfigmap: ""
 
-initdbScripts: {}
-
+initdbScripts:
+  createAdminUser.js: |
+    db = db.getSiblingDB('admin');
+    db.createUser({
+      user: "{{ .Values.auth.username }}",
+      pwd: "{{ .Values.auth.password }}",
+      roles: [ { role: "root", db: "admin" } ]
+    });
 initdbScriptsConfigMap: ""
 
 command: []
@@ -797,12 +803,12 @@ metrics:
 backup_job:
   enabled: true
   
-  bucket_uri: "s3://navneet-workflow/mongo/"
-  aws_default_region: "ap-south-1"
-  cron_for_full_backup: "*/3 * * * *"
+  bucket_uri: "s3://mongodb-backups-atmosly/"
+  aws_default_region: "us-east-1"
+  cron_for_full_backup: "*/1 * * * *"
 
   annotations:
-    aws: arn:aws:iam::767398031518:role/test-mysq-backup-restore
+    aws: arn:aws:iam::767398031518:role/mongo-backup
 
   bucket_provider_type: s3
 
@@ -817,12 +823,12 @@ backup_job:
 restore_job:
   enabled: true
 
-  bucket_uri: "s3://navneet-workflow/mongo/mongodumpfull_20240221_080901.gz"
-  file_name: "mongodumpfull_20240221_080901.gz"
-  aws_default_region: ap-south-1
+  bucket_uri: "s3://mongodb-backups-atmosly/mongodumpfull_20241021_060701.gz"
+  file_name: "mongodumpfull_20241021_060701.gz"
+  aws_default_region: us-east-1
 
   annotations:
-    aws: arn:aws:iam::767398031518:role/test-mysq-backup-restore
+    aws: arn:aws:iam::767398031518:role/mongo-backup
 
   bucket_provider_type: s3
 
