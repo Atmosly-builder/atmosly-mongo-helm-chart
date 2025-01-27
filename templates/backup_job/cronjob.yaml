@@ -24,7 +24,7 @@ spec:
             image: squareops/mongodb-backup:v7
             env:
             - name: MONGODB_URI
-              value: mongodb://{{ .Values.auth.rootUser }}:{{ .Values.auth.rootPassword }}@{{ .Release.Name }}-headless.{{ .Release.Namespace }}.svc.cluster.local:27017
+              value: mongodb://{{ .Values.auth.rootUser }}:{{ .Values.auth.rootPassword }}@{{ .Release.Name }}.{{ .Release.Namespace }}.svc.cluster.local:27017
             - name: MONGO_OPLOG
               value: "true"
             - name: MONGO_BUCKET_URI

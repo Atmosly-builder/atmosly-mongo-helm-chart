@@ -17,8 +17,8 @@ We truncate at 63 chars because some Kubernetes name fields are limited to this 
 If release name contains chart name it will be used as a full name.
 */}}
 {{- define "mongodb.fullname" -}}
-{{- include "common.names.fullname" . -}}
-{{- end -}}
+{{ .Release.Name }}
+{{- end }}
 
 {{/*
 Create a default mongo service name which can be overridden.
@@ -27,13 +27,11 @@ Create a default mongo service name which can be overridden.
     {{- if and .Values.service .Values.service.nameOverride -}}
         {{- print .Values.service.nameOverride -}}
     {{- else -}}
-        {{- if eq .Values.architecture "replicaset" -}}
-            {{- printf "%s-headless" (include "mongodb.fullname" .) -}}
-        {{- else -}}
-            {{- printf "%s" (include "mongodb.fullname" .) -}}
-        {{- end -}}
+        {{- printf "%s" .Release.Name -}}
     {{- end -}}
 {{- end -}}
+
+
 
 {{/*
 Create a default mongo arbiter service name which can be overridden.
@@ -42,8 +40,8 @@ Create a default mongo arbiter service name which can be overridden.
     {{- if and .Values.arbiter.service .Values.arbiter.service.nameOverride -}}
         {{- print .Values.arbiter.service.nameOverride -}}
     {{- else -}}
-        {{- printf "%s-arbiter-headless" (include "mongodb.fullname" .) -}}
-    {{- end }}
+        {{- printf "%s-arbiter" .Release.Name -}}
+    {{- end -}}
 {{- end }}
 
 {{/*

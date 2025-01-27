@@ -801,14 +801,14 @@ metrics:
     rules: []
 
 backup_job:
-  enabled: true
+  enabled: false
   
-  bucket_uri: "s3://mongodb-backups-atmosly/"
+  bucket_uri: "s3://mongo-backup-testing-atmosly/"
   aws_default_region: "us-east-1"
-  cron_for_full_backup: "*/1 * * * *"
+  cron_for_full_backup: "*/2 * * * *"
 
   annotations:
-    aws: arn:aws:iam::767398031518:role/mongo-backup
+    aws: arn:aws:iam::557690592501:role/mongo-backup
 
   bucket_provider_type: s3
 
@@ -823,12 +823,12 @@ backup_job:
 restore_job:
   enabled: true
 
-  bucket_uri: "s3://mongodb-backups-atmosly/mongodumpfull_20241021_060701.gz"
-  file_name: "mongodumpfull_20241021_060701.gz"
+  bucket_uri: "s3://mongo-backup-testing-atmosly/mongodumpfull_20250127_134701.gz"
+  file_name: "mongodumpfull_20250127_134701.gz"
   aws_default_region: us-east-1
 
   annotations:
-    aws: arn:aws:iam::767398031518:role/mongo-backup
+    aws: arn:aws:iam::557690592501:role/mongo-backup
 
   bucket_provider_type: s3
 
