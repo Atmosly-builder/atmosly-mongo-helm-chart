@@ -412,7 +412,7 @@ persistence:
     dataSource: {}
 persistentVolumeClaimRetentionPolicy:
   enabled: true
-  whenScaled: Delete
+  whenScaled: Retain
   whenDeleted: Delete
 backup:
   enabled: false
