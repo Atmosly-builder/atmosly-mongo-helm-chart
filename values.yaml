@@ -397,7 +397,7 @@ persistence:
   existingClaim: ""
   persistentVolumeReclaimPolicy: Delete
   resourcePolicy: ""
-  storageClass: "gp2"
+  storageClass: ""
   accessModes:
     - ReadWriteOnce
   size: 8Gi
@@ -442,7 +442,7 @@ backup:
     storage:
       existingClaim: ""
       resourcePolicy: ""
-      storageClass: "gp2"
+      storageClass: ""
       accessModes:
         - ReadWriteOnce
       size: 8Gi
@@ -695,7 +695,7 @@ hidden:
   persistence:
     enabled: true
     medium: ""
-    storageClass: "gp2"
+    storageClass: ""
     accessModes:
       - ReadWriteOnce
     size: 8Gi
