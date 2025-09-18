@@ -50,7 +50,7 @@ diagnosticMode:
 
 image:
   registry: docker.io
-  repository: bitnami/mongodb
+  repository: bitnamilegacy/mongodb
   tag: 7.0.5-debian-11-r6
   digest: ""
 
@@ -112,7 +112,7 @@ tls:
 
   image:
     registry: docker.io
-    repository: bitnami/nginx
+    repository: bitnamilegacy/nginx
     tag: 1.25.3-debian-11-r7
     digest: ""
     pullPolicy: IfNotPresent
@@ -335,7 +335,7 @@ externalAccess:
     enabled: false
     image:
       registry: docker.io
-      repository: bitnami/kubectl
+      repository: bitnamilegacy/kubectl
       tag: 1.29.1-debian-11-r3
       digest: ""
       pullPolicy: IfNotPresent
@@ -468,7 +468,7 @@ volumePermissions:
   enabled: false
   image:
     registry: docker.io
-    repository: bitnami/os-shell
+    repository: bitnamilegacy/os-shell
     tag: 11-debian-11-r96
     digest: ""
     pullPolicy: IfNotPresent
@@ -718,7 +718,7 @@ metrics:
   enabled: true
   image:
     registry: docker.io
-    repository: bitnami/mongodb-exporter
+    repository: bitnamilegacy/mongodb-exporter
     tag: 0.40.0-debian-11-r6
     digest: ""
     pullPolicy: IfNotPresent

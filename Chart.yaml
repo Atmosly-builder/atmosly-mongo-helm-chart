@@ -2,15 +2,15 @@ annotations:
   category: Database
   images: |
     - name: kubectl
-      image: docker.io/bitnami/kubectl:1.29.1-debian-11-r3
+      image: docker.io/bitnamilegacy/kubectl:1.29.1-debian-11-r3
     - name: mongodb-exporter
-      image: docker.io/bitnami/mongodb-exporter:0.40.0-debian-11-r6
+      image: docker.io/bitnamilegacy/mongodb-exporter:0.40.0-debian-11-r6
     - name: mongodb
-      image: docker.io/bitnami/mongodb:7.0.5-debian-11-r6
+      image: docker.io/bitnamilegacy/mongodb:7.0.5-debian-11-r6
     - name: nginx
-      image: docker.io/bitnami/nginx:1.25.3-debian-11-r7
+      image: docker.io/bitnamilegacy/nginx:1.25.3-debian-11-r7
     - name: os-shell
-      image: docker.io/bitnami/os-shell:11-debian-11-r96
+      image: docker.io/bitnamilegacy/os-shell:11-debian-11-r96
   licenses: Apache-2.0
 apiVersion: v2
 appVersion: 7.0.5
