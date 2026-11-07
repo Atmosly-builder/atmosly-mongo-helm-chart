@@ -12,7 +12,7 @@ spec:
       serviceAccountName: sa-mongo-restore
       containers:
           - name: restore-mongodb
-            image: squareops/mongodb-restore:v6
+            image: {{ .Values.restore_job.image.repository }}:{{ .Values.restore_job.image.tag }}
             env:
             - name: MONGO_URI
               value: mongodb://{{ .Values.auth.rootUser }}:{{ .Values.auth.rootPassword }}@{{ .Release.Name }}.{{ .Release.Namespace }}.svc.cluster.local:27017

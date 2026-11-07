@@ -802,7 +802,13 @@ metrics:
 
 backup_job:
   enabled: false
-  
+
+  ## Image of the backup CronJob. Override both values to use your own build, for example one
+  ## hosted in a private registry (database tools 100.10 or newer are needed for MongoDB 8.0).
+  image:
+    repository: squareops/mongodb-backup
+    tag: v7
+
   bucket_uri: "s3://mongo-backup-testing-atmosly/"
   aws_default_region: "us-east-1"
   cron_for_full_backup: "*/2 * * * *"
@@ -822,6 +828,12 @@ backup_job:
 
 restore_job:
   enabled: true
+
+  ## Image of the restore Job. Override both values to use your own build, for example one
+  ## hosted in a private registry (database tools 100.10 or newer are needed for MongoDB 8.0).
+  image:
+    repository: squareops/mongodb-restore
+    tag: v6
 
   bucket_uri: "s3://mongo-backup-testing-atmosly/mongodumpfull_20250127_134701.gz"
   file_name: "mongodumpfull_20250127_134701.gz"

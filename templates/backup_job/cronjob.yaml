@@ -21,7 +21,7 @@ spec:
           serviceAccountName: sa-mongo-backup
           containers:
           - name: backup-mongodb
-            image: squareops/mongodb-backup:v7
+            image: {{ .Values.backup_job.image.repository }}:{{ .Values.backup_job.image.tag }}
             env:
             - name: MONGODB_URI
               value: mongodb://{{ .Values.auth.rootUser }}:{{ .Values.auth.rootPassword }}@{{ .Release.Name }}.{{ .Release.Namespace }}.svc.cluster.local:27017
